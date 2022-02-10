@@ -25,5 +25,5 @@ Route.group(() => {
     return { hello: 'world' }
   })
 
-  Route.post('/users', 'usersController.store')
+  Route.resource('/users', 'usersController').apiOnly()
 }).prefix('/api')
